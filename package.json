@@ -1,11 +1,13 @@
 {
   "name": "react-lavka-ssr",
+  "homepage": "https://alex5.github.io/react-lavka",
+  "repository": "https://github.com/Alex5/react-lavka-ssr",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "react-router build",
-    "dev": "cross-env NODE_ENV=development node server.js",
-    "start": "node server.js",
+    "dev": "cross-env NODE_ENV=development tsx server.ts",
+    "start": "node server.ts",
     "typecheck": "react-router typegen && tsc -b"
   },
   "dependencies": {
@@ -14,10 +16,13 @@
     "compression": "^1.7.5",
     "express": "^5.1.0",
     "isbot": "^5.1.27",
+    "lucide-react": "^0.522.0",
     "morgan": "^1.10.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router": "^7.5.3"
+    "react-router": "^7.5.3",
+    "swr": "^2.3.3",
+    "tailwind-variants": "^1.0.0"
   },
   "devDependencies": {
     "@react-router/dev": "^7.5.3",
@@ -31,6 +36,7 @@
     "@types/react-dom": "^19.1.2",
     "cross-env": "^7.0.3",
     "tailwindcss": "^4.1.4",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "vite": "^6.3.3",
     "vite-tsconfig-paths": "^5.1.4"
