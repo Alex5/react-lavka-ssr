@@ -17,8 +17,8 @@ export default function RootPage() {
     const {category} = useLoaderData<typeof loader>();
 
     return (
-        <Div flex>
-            <Div flex flexCol gap2>
+        <div className="root-page-container">
+            <div className="category-list">
                 {category?.categories?.[0]?.items?.map((categoryItem) => {
                     const products = categoryItem.items?.map((productItem) => ({
                         id: productItem.value.id,
@@ -29,14 +29,14 @@ export default function RootPage() {
                     }))
 
                     return (
-                        <Div key={categoryItem.id} flex flexCol gap1>
+                        <Div key={categoryItem.id} className="category-block">
                             <Text fontSize="title4" fontWeight="medium">{categoryItem.value.title}</Text>
                             <ProductList products={products}/>
                         </Div>
                     )
                 })}
-            </Div>
+            </div>
             <CartSidebar/>
-        </Div>
+        </div>
     )
 }
