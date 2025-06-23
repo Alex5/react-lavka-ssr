@@ -9,8 +9,6 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import './routes/home/page.style.css';
-import './routes/home/components/cart-sidebar/cart-sidebar.style.css';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
