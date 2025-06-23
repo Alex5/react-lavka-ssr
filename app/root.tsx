@@ -12,20 +12,6 @@ import "./app.css";
 import './routes/home/page.style.css';
 import './routes/home/components/cart-sidebar/cart-sidebar.style.css';
 
-export function links() {
-  return [
-    {
-      rel: "stylesheet",
-      href: "./routes/home/page.style.css",
-    },
-    {
-      rel: "stylesheet",
-      href: "./routes/home/components/cart-sidebar/cart-sidebar.style.css",
-    },
-  ];
-}
-
-
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
