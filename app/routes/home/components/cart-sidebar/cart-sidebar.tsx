@@ -14,7 +14,7 @@ export function CartSidebar() {
     const total = calculateTotal(cart);
 
     return (
-        <aside className={styles["cart-sidebar"]}>
+        <aside className="cart-sidebar-container">
             <Div flex flexCol gap1>
                 <Text
                     fontSize="title4"
