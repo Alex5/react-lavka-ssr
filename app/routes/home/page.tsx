@@ -2,15 +2,13 @@ import {Div} from "@shared/ui/div/div";
 import {CartSidebar} from "./components/cart-sidebar/cart-sidebar";
 import {ProductList} from "./components/product-list/product-list";
 import {Text} from "@shared/ui/text/Text";
-// import {CatalogSidebar} from "@home/components/catalog-sidebar/catalog-sidebar";
 import type {Route} from "./+types/page"
 import type {CategoryData} from "@shared/api/hooks/use-category/use-category.types";
 import {useLoaderData} from "react-router";
+import {fetcher} from "@shared/api/fetcher";
 
 export async function loader({}: Route.LoaderArgs) {
-    const res = await fetch('http://localhost:5174/api/v1/category');
-
-    const category = await res.json() as CategoryData;
+    const category = await fetcher<CategoryData>('category');
 
     return {category};
 }
@@ -20,7 +18,6 @@ export default function RootPage() {
 
     return (
         <Div flex>
-            {/*<CatalogSidebar/>*/}
             <Div flex flexCol gap2>
                 {category?.categories?.[0]?.items?.map((categoryItem) => {
                     const products = categoryItem.items?.map((productItem) => ({
