@@ -25,3 +25,10 @@
     font-weight: 600;
     margin-bottom: 0.25rem;
 }
+
+.cart-sidebar {
+    max-width: var(--react-lavka-cart-sidebar-width);
+    min-width: var(--react-lavka-cart-sidebar-width);
+    display: block;
+    background-color: aliceblue;
+}

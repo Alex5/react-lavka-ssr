@@ -36,7 +36,9 @@ export default function RootPage() {
                     )
                 })}
             </div>
-            <CartSidebar/>
+            <div className="cart-sidebar">
+                <CartSidebar/>
+            </div>
         </div>
     )
 }
